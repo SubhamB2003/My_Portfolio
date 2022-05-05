@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lobster&display=swap");
+
+.new {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  background: black;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  text-align: center;
+}
+
+.new:hover .overlay {
+  opacity: 0.6;
+}
+
+.title-font {
+  font-family: "EB Garamond", serif;
+  font-family: "Lobster", cursive;
+}

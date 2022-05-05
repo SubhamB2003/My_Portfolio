@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lobster&family=Lora&display=swap");
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 6rem 0;
+}
+
+.text {
+  font-family: "EB Garamond", serif;
+  font-family: "Lobster", cursive;
+  font-family: "Lora", serif;
+}
+
+.services h1 {
+  background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
+  background-size: 100%;
+  background-clip: var(#f7673c);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 5rem;
+  font-size: 4.5rem;
+}
+
+.services__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.services__card {
+  margin: 10px;
+  height: 325px;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s ease-in;
+}
+
+.services__card h2 {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.services__card p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.services__card:hover {
+  transform: scale(1.075);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  .services__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
