@@ -24,11 +24,11 @@ function Gallery2() {
                         <div className="container-fluid mt-32 mb-4">
                             <h1 className='uppercase text-6xl font-bold text-amber-500 text-center mb-10' style={{ fontFamily: 'Lobster' }}>Family Photos</h1>
                             <div className="row">
-                                <div className="col-lg-4 mb-4">
+                                {/* <div className="col-lg-4 mb-4">
                                     <div className="carousel-item active shadow-none">
                                         <img src={pic_1} className="d-block w-100" style={{ width: "100%" }} alt="..." />
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="col-lg-4 mb-4">
                                     <div className="carousel-item active shadow-none">
                                         <img src={pic_2} className="d-block w-100" style={{ width: "100%" }} alt="..." />

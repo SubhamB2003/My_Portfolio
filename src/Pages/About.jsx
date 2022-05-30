@@ -9,6 +9,7 @@ import travel2 from '../Images/Travel3.jpg'
 import travel3 from '../Images/Travel4.jpg'
 
 import arrow from '../Images/arrow.svg'
+import Education from './Education'
 
 
 function About() {
@@ -75,6 +76,10 @@ function About() {
                     </div>
                 </section>
             </div>
+
+            <hr className='h-4 mr-28 ml-28' />
+
+            <Education/>
 
             <hr className='h-4 mr-28 ml-28' />
 

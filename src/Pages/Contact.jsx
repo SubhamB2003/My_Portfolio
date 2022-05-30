@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../Components/Navbar'
 import connectUs from '../Images/connect1.png'
 import '../CSS_File/About.css'
@@ -12,11 +12,37 @@ import home from '../Images/house-door.svg'
 import city from '../Images/geo-alt.svg'
 import state from '../Images/map.svg'
 import pincode from '../Images/pin-map.svg'
-
 import arrow from '../Images/arrow.svg'
-
+import emailjs from 'emailjs-com'
 
 function Contact() {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // const Data = { name, email, message };
+
+        if (name != '' && email != '' && message != '') {
+            emailjs.sendForm('service_35t09et',
+                'template_oz0blta',
+                e.target,
+                'user_ne1wvrwUw7RlLbCObv0tF').then((res) => {
+                    console.log(res);
+                    setEmail('')
+                    setName('')
+                    setMessage('')
+                    window.alert('Thank you for your feedback');
+                })
+        }
+        else {
+            window.alert('Please Fill the form');
+        }
+    }
+
     return (
         <div>
             <Navbar />
@@ -68,15 +94,15 @@ function Contact() {
                                     </tr>
                                     <tr>
                                         <th scope="row" className="ps-2 text-nowrap flex"><img src={city} alt='' /><span className='ml-2'>City</span></th>
-                                        <td colspan="2">Hooghly</td>
+                                        <td colSpan="2">Hooghly</td>
                                     </tr>
                                     <tr>
                                         <th scope="row" className="ps-2 text-nowrap flex"><img src={state} alt='' /><span className='ml-2'>State</span></th>
-                                        <td colspan="2">West Bengal</td>
+                                        <td colSpan="2">West Bengal</td>
                                     </tr>
                                     <tr>
                                         <th scope="row" className="ps-2 text-nowrap flex"><img src={pincode} alt='' /><span className='ml-2'>Pincode</span></th>
-                                        <td colspan="2">712123</td>
+                                        <td colSpan="2">712123</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -86,12 +112,56 @@ function Contact() {
             </div>
 
 
+            <div className="container px-5 py-6 mx-auto">
+                <div className="flex flex-col text-center w-full">
+                    <h1 className="sm:text-7xl text-4xl title-font font-serif text-amber-400">Feedback</h1>
+                </div>
+                <form onSubmit={handleSubmit}>
+                    <div className="lg:w-1/2 md:w-2/3 mx-auto">
+                        <div className="flex flex-wrap -m-2">
+                            <div className="p-2 w-1/2">
+                                <div className="relative">
+                                    <label htmlFor="name" className="leading-7 text-base font-serif text-white">Name</label>
+                                    <input type="text" name="name" className="placeholder:md:text-lg placeholder:text-sm placeholder:text-blue-500 form-control form-control-lg border-2 border-blue-600 font-serif"
+                                        placeholder='Enter the name'
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)} />
+                                </div>
+                            </div>
+                            <div className="p-2 w-1/2">
+                                <div className="relative">
+                                    <label htmlFor="name" className="leading-7 text-base font-serif text-white">Email</label>
+                                    <input type="email" name="email" className="placeholder:md:text-lg placeholder:text-sm placeholder:text-blue-500 form-control form-control-lg border-2 border-blue-600 font-serif"
+                                        placeholder='Enter your email'
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)} />
+
+                                </div>
+                            </div>
+                            <div className="p-2 w-full">
+                                <div className="relative">
+                                    <label htmlFor="message" className="leading-7 text-base font-serif text-white">Message</label>
+                                    <textarea type='text' name="message" className="placeholder:md:text-lg placeholder:text-sm placeholder:text-blue-500 text-xl form-control form-control-lg border-2 border-blue-600 font-serif w-full rounded h-32 outline-none resize-none leading-6"
+                                        placeholder='Enter your massage'
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)} />
+                                </div>
+                            </div>
+                            <div className="p-2 w-full">
+                                <button className="flex mx-auto font-serif text-white py-2 px-8 bg-[#1814ff] rounded-full text-lg hover:bg-black hover:shadow-md hover:shadow-[#1814ff]">Submit</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
             <div className='content-end'>
-                <a href="#contact" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Back to home" className='animate-bounce mr-8 mb-4' style={{ float: 'right' }}>
+                <a href="#about" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Back to home" className='animate-bounce mr-8 mb-4' style={{ float: 'right' }}>
                     <img src={arrow} alt='' className='justify-items-end w-10' />
                 </a>
             </div>
-
 
         </div>
     )

@@ -23,6 +23,8 @@ import Bootstrap_Icon from '../Technical_Icon/Bootstrap_Icon.png'
 import Tailwind_Icon from '../Technical_Icon/Tailwind_Icon.png'
 import Git_Icon from '../Technical_Icon/Git_Icon.png'
 import Github_Icon from '../Technical_Icon/Github_Icon.png'
+import Express_Icon from '../Technical_Icon/express.png'
+import Mongo_Icon from '../Technical_Icon/mongodb.png'
 
 
 function Skills() {
@@ -51,7 +53,7 @@ function Skills() {
                         <div class="services__card shadow">
                             {/* <img src={Node_Icon} className='h-24 w-32 ml-20' alt='' /> */}
                             <h2 className='text-2xl text text-gray-600'>Coming Soon..</h2>
-                            <p className='font-serif text-gray-600'>AI Powered technology</p>
+                            {/* <p className='font-serif text-gray-600'>AI Powered technology</p> */}
                         </div>
                     </div>
                 </div>
@@ -112,9 +114,9 @@ function Skills() {
                         <p className='font-serif text-gray-600 pl-2 pr-2'>I have 1 year of experience in JavaScript. I can use this in every demo project to learn this.</p>
                     </div>
                     <div class="services__card shadow">
-                        {/* <img src={Node_Icon} className='h-24 w-32 ml-20' alt='' /> */}
-                        <h2 className='text-2xl text text-gray-600'>Coming Soon..</h2>
-                        <p className='font-serif text-gray-600'>AI Powered technology</p>
+                        <img src={Node_Icon} className='h-24 w-36 ml-20' alt='' />
+                        <h2 className='text-2xl text text-gray-600'>Node Js</h2>
+                        <p className='font-serif text-gray-600 pl-2 pr-2'>I half a year of experience in Node Js.</p>
                     </div>
                 </div>
             </div>
@@ -141,9 +143,9 @@ function Skills() {
                         <p className='font-serif text-gray-600 pl-2 pr-2'>I half a year of experience in Tailwind Css. I also use this in my first live project.</p>
                     </div>
                     <div class="services__card shadow">
-                        <img src={Node_Icon} className='h-24 w-36 ml-20' alt='' />
-                        <h2 className='text-2xl text text-gray-600'>Node Js</h2>
-                        <p className='font-serif text-gray-600 pl-2 pr-2'>I half a year of experience in Node Js.</p>
+                        <img src={Express_Icon} className='h-24 w-24 ml-24' alt='' />
+                        <h2 className='text-2xl text text-gray-600'>Express Js</h2>
+                        <p className='font-serif text-gray-600'>Currently learning</p>
                     </div>
                 </div>
             </div>
@@ -168,12 +170,24 @@ function Skills() {
                     <div class="services__card shadow">
                         {/* <img src={Node_Icon} className='h-24 w-32 ml-20' alt='' /> */}
                         <h2 className='text-2xl text text-gray-600'>Coming Soon..</h2>
-                        <p className='font-serif text-gray-600'>AI Powered technology</p>
+                        {/* <p className='font-serif text-gray-600'>AI Powered technology</p> */}
                     </div>
                     <div class="services__card shadow">
                         {/* <img src={Node_Icon} className='h-24 w-32 ml-20' alt='' /> */}
                         <h2 className='text-2xl text text-gray-600'>Coming Soon..</h2>
-                        <p className='font-serif text-gray-600'>AI Powered technology</p>
+                        {/* <p className='font-serif text-gray-600'>AI Powered technology</p> */}
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="services" id="services">
+                <h1 className='text-7xl text-center' style={{ fontFamily: 'Lobster' }}>Database</h1>
+                <div class="services__wrapper">
+                    <div class="services__card shadow">
+                        <img src={Mongo_Icon} className='h-24 w-32 ml-20 rounded-full' alt='' />
+                        <h2 className='text-2xl text text-gray-600'>MongoDB</h2>
+                        <p className='font-serif text-gray-600'>Currently learning</p>
                     </div>
                 </div>
             </div>

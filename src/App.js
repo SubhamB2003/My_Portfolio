@@ -14,6 +14,7 @@ import Gallery3 from './DemoGallery/Gallery3';
 import Gallery4 from './DemoGallery/Gallery4';
 
 import ErrorPage from './Pages/ErrorPage'
+import Project from './Pages/Project';
 
 
 function App() {
@@ -26,11 +27,11 @@ function App() {
         <Route exact path='/about'>
           <About />
         </Route>
-        <Route exact path='/education'>
-          <Education />
-        </Route>
         <Route exact path='/skills'>
           <Skills />
+        </Route>
+        <Route exact path='/project'>
+          <Project/>
         </Route>
         <Route exact path='/gallery'>
           <Gallery />

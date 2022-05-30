@@ -68,18 +68,7 @@ function Education() {
             </div>
 
 
-            <hr className='h-4 mr-28 ml-28' />
-
-            <div>
-
-            </div>
-
-
-            <div className='content-end'>
-                <a href="#Top" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Back to home" className='animate-bounce mr-8 mb-4' style={{ float: 'right' }}>
-                    <img src={arrow} alt='' className='justify-items-end w-10' />
-                </a>
-            </div>
+            <hr className='h-4 mr-28 ml-28' />        
 
         </div>
     )
